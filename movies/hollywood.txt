@@ -1,1 +1,572 @@
+# Hollywood — 20 titles per letter (game leading The/A/An ignore karta hai)
+# A
+Avatar
+Alien
+Aliens
+Amadeus
+Argo
+Arrival
+Aladdin
+Armageddon
+Aquaman
+Airplane
+American Beauty
+American Psycho
+Apocalypse Now
+Annie Hall
+Arlington Road
+Army of Darkness
+Annihilation
+Atomic Blonde
+Atonement
+A Few Good Men
 
+# B
+Batman
+Beetlejuice
+Braveheart
+Blade Runner
+Back to the Future
+Big
+Brave
+Bridesmaids
+Birdman
+Borat
+Batman Begins
+Beauty and the Beast
+Black Swan
+Blade
+Blood Diamond
+Bonnie and Clyde
+The Bourne Identity
+Boyhood
+Bridge of Spies
+Bullet Train
+
+# C
+Casablanca
+Chinatown
+Chicago
+Clueless
+Creed
+Cars
+Coraline
+Commando
+Contagion
+Cocoon
+Cast Away
+Catch Me If You Can
+Cinderella
+Citizen Kane
+City of God
+Cliffhanger
+Collateral
+Constantine
+Crazy Rich Asians
+Crouching Tiger Hidden Dragon
+
+# D
+Django Unchained
+Drive
+Dune
+Deadpool
+Dunkirk
+Dirty Harry
+Dredd
+Dumbo
+Dragnet
+Doom
+Die Hard
+Doctor Strange
+Donnie Darko
+Dr. No
+Dracula
+Dallas Buyers Club
+Dark City
+Dead Poets Society
+Demolition Man
+District 9
+
+# E
+E.T.
+Elf
+Edge of Tomorrow
+Everest
+Emma
+Equilibrium
+Election
+Enchanted
+Elysium
+Epic
+Edward Scissorhands
+8 Mile
+El Mariachi
+Elizabeth
+End of Watch
+Enemy of the State
+Enter the Dragon
+Erin Brockovich
+Escape Plan
+Event Horizon
+
+# F
+Fargo
+Frozen
+Fight Club
+Forrest Gump
+Ferris Bueller's Day Off
+Finding Nemo
+Frida
+Frankenstein
+Free Guy
+Face/Off
+Falling Down
+Fantastic Four
+Fast and Furious
+Fear and Loathing in Las Vegas
+Field of Dreams
+First Blood
+Fletch
+Four Weddings and a Funeral
+Fried Green Tomatoes
+Full Metal Jacket
+
+# G
+Gladiator
+Gravity
+Ghostbusters
+Grease
+Goodfellas
+Get Out
+Gone Girl
+Godzilla
+Gremlins
+Gran Torino
+Gattaca
+Ghost
+Girl Interrupted
+Glass
+GoldenEye
+Gone Baby Gone
+Good Will Hunting
+Grosse Pointe Blank
+Groundhog Day
+Gangs of New York
+
+# H
+Hamlet
+Hancock
+Heat
+Her
+Hugo
+Hulk
+Hairspray
+Halloween
+Hercules
+Horrible Bosses
+Harry Potter
+Hellboy
+Hereditary
+High Fidelity
+Hitch
+Home Alone
+Hook
+Hotel Rwanda
+How to Train Your Dragon
+The Hunger Games
+
+# I
+Inception
+Interstellar
+Insomnia
+Iron Man
+Independence Day
+Ice Age
+Inside Out
+The Incredibles
+Identity
+Ip Man
+I Am Legend
+I Robot
+Indiana Jones
+Inglourious Basterds
+Interview with the Vampire
+Into the Wild
+Invictus
+It
+The Italian Job
+The Imitation Game
+
+# J
+Jaws
+Joker
+Juno
+Jumanji
+Jurassic Park
+Jerry Maguire
+Jojo Rabbit
+Jackie Brown
+Jarhead
+Judge Dredd
+Jackie
+Jason Bourne
+J Edgar
+JFK
+John Carter
+Johnny English
+Joy
+Julie and Julia
+The Jungle Book
+Jupiter Ascending
+
+# K
+Kill Bill
+King Kong
+Kick-Ass
+Knives Out
+Kramer vs. Kramer
+Kindergarten Cop
+Kong: Skull Island
+K-Pax
+Kiss Kiss Bang Bang
+Kundun
+Kate and Leopold
+Keeping the Faith
+Key Largo
+Kickboxer
+Killers
+King Arthur
+Kingdom of Heaven
+Kingsman
+Kiss the Girls
+Knight and Day
+
+# L
+Leon
+Logan
+Looper
+Lucy
+Lincoln
+Life of Pi
+Limitless
+Little Women
+La La Land
+Lawless
+Labyrinth
+Lady Bird
+Lara Croft
+The Last Samurai
+Legend
+Lethal Weapon
+Liar Liar
+Little Miss Sunshine
+Lock Stock and Two Smoking Barrels
+The Lord of the Rings
+
+# M
+The Matrix
+Mad Max
+Memento
+Moana
+Mulan
+Munich
+Magnolia
+Men in Black
+Mission Impossible
+Mulholland Drive
+Manchester by the Sea
+Manhattan
+Marley and Me
+Mary Poppins
+The Mask
+Match Point
+Mean Girls
+Meet the Parents
+Midnight in Paris
+Minority Report
+
+# N
+Nightcrawler
+Napoleon Dynamite
+Nebraska
+Neighbors
+Never Let Me Go
+No Country for Old Men
+Nobody
+North by Northwest
+Notting Hill
+Nope
+The Naked Gun
+National Treasure
+Natural Born Killers
+Network
+New Jack City
+A Nightmare on Elm Street
+1984
+Nixon
+Noah
+The Notebook
+
+# O
+Oppenheimer
+Oblivion
+Office Space
+Oldboy
+Onward
+Ocean's Eleven
+Out of Africa
+Once Upon a Time in Hollywood
+Orphan
+Oculus
+O Brother Where Art Thou
+October Sky
+On the Waterfront
+One Flew Over the Cuckoo's Nest
+Open Range
+Ordinary People
+Othello
+Outbreak
+Overboard
+Oz the Great and Powerful
+
+# P
+Parasite
+Pulp Fiction
+Psycho
+Predator
+Pirates of the Caribbean
+Platoon
+Pretty Woman
+Prisoners
+Pitch Perfect
+Pan's Labyrinth
+Pacific Rim
+Pain and Gain
+Passengers
+The Patriot
+Pearl Harbor
+Philadelphia
+Phone Booth
+Planet of the Apes
+Point Break
+Poltergeist
+
+# Q
+A Quiet Place
+Quantum of Solace
+Quiz Show
+Quo Vadis
+The Queen
+Quicksilver
+Queen of Katwe
+The Quick and the Dead
+Quills
+Q&A
+Quarantine
+The Quest
+Queen and Country
+Quigley Down Under
+The Quiet Ones
+Quiz
+Q
+Queen Bees
+Quick Change
+Quo Vadis
+
+# R
+Rocky
+Ratatouille
+Requiem for a Dream
+Reservoir Dogs
+Rango
+Rebecca
+Rambo
+Robin Hood
+Rush
+Ready Player One
+Rain Man
+Ransom
+Ray
+Real Steel
+Rear Window
+Red Dragon
+Remember the Titans
+Resident Evil
+Robocop
+Runaway Jury
+
+# S
+Scarface
+Se7en
+Shrek
+Skyfall
+Spider-Man
+Spotlight
+Superman
+Sicario
+Signs
+Speed
+Saving Private Ryan
+Schindler's List
+Scream
+The Shawshank Redemption
+Shutter Island
+The Silence of the Lambs
+Sin City
+The Sixth Sense
+Slumdog Millionaire
+Stand by Me
+
+# T
+Titanic
+Top Gun
+Toy Story
+The Terminator
+Taxi Driver
+The Thing
+Troy
+Tangled
+Training Day
+Tenet
+Taken
+Tarzan
+Tears of the Sun
+Ted
+Thelma and Louise
+They Live
+Thirteen
+Thor
+Total Recall
+True Lies
+
+# U
+Up
+Us
+Unforgiven
+Uncharted
+Unbreakable
+Underworld
+Up in the Air
+Upgrade
+U-571
+Unstoppable
+UHF
+Ultraviolet
+Uncle Buck
+Under Siege
+Under the Tuscan Sun
+United 93
+Universal Soldier
+Unlawful Entry
+Uptown Girls
+The Usual Suspects
+
+# V
+Vertigo
+Venom
+V for Vendetta
+Valkyrie
+Vacation
+Victor Frankenstein
+Vantage Point
+Vanilla Sky
+Vicky Cristina Barcelona
+The Vast of Night
+Valerian
+Van Helsing
+Vegas Vacation
+Vertical Limit
+Videodrome
+The Village
+Viva Las Vegas
+Volcano
+Virus
+Voracious
+
+# W
+Whiplash
+WALL-E
+Wonder Woman
+Warrior
+Watchmen
+Wanted
+Wicked
+The Wolf of Wall Street
+Wonder
+Wind River
+Wag the Dog
+Walk the Line
+War of the Worlds
+War Dogs
+Wayne's World
+We Were Soldiers
+Wedding Crashers
+What Lies Beneath
+Wild Wild West
+Winter's Bone
+
+# X
+X-Men
+X2
+X-Men: The Last Stand
+X-Men Origins: Wolverine
+X-Men: First Class
+X-Men: Days of Future Past
+X-Men: Apocalypse
+X-Men: Dark Phoenix
+The New Mutants
+xXx
+xXx: State of the Union
+Xanadu
+Xtro
+Xtro 2
+Xtro 3
+X+Y
+XChange
+Xiu Xiu
+The X-Files: Fight the Future
+X: The Man with the X-Ray Eyes
+
+# Y
+Yesterday
+Yes Man
+Young Frankenstein
+You've Got Mail
+Youth
+Yentl
+Year One
+Yoga Hosers
+Y Tu Mama Tambien
+Yankee Doodle Dandy
+Yellow Submarine
+You Only Live Twice
+Young Guns
+Your Name
+Yours Mine and Ours
+Youth in Revolt
+Yojimbo
+Year of the Dragon
+Yankee
+Yentl
+
+# Z
+Zodiac
+Zootopia
+Zoolander
+Zombieland
+The Mask of Zorro
+Zero Dark Thirty
+Zathura
+Zack and Miri Make a Porno
+Zulu
+Zapped
+Z for Zachariah
+Zardoz
+Zero Effect
+Zoolander 2
+Zombieland: Double Tap
+Zulu Dawn
+Zorba the Greek
+Zenon
+Zeus and Roxanne
+Zapped Again
