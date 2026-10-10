@@ -1,1 +1,572 @@
+# Bollywood — 20 titles per letter (game leading The/A/An ignore karta hai)
+# A
+Anand
+Aashiqui
+Andaaz
+Aitraaz
+Agneepath
+Aankhen
+Amar Akbar Anthony
+Aradhana
+Akele Hum Akele Tum
+Aamir
+Anari
+Andaz Apna Apna
+Ankush
+Arjun
+Arzoo
+Aashiqui 2
+Aan
+Abhimaan
+Aetbaar
+Anjaam
 
+# B
+Baazigar
+Bajrangi Bhaijaan
+Barfi
+Bhoothnath
+Badlapur
+Bang Bang
+Bhool Bhulaiyaa
+Bawarchi
+Bemisal
+Bazaar
+Baaghi
+Bade Miyan Chote Miyan
+Banaras
+Bandini
+Barsaat
+Batla House
+Beta
+Bhaag Milkha Bhaag
+Bhairavi
+Bobby
+
+# C
+Chachi 420
+Chameli
+Chandni
+Cheeni Kum
+Chhoti Si Baat
+Coolie
+Chalte Chalte
+Chaalbaaz
+Chupke Chupke
+Chakra
+Champion
+Chandramukhi
+Chashme Buddoor
+Chhichhore
+Chhupa Rustam
+Chori Chori
+Corporate
+Chor Machaye Shor
+Chak De India
+Chandni Chowk to China
+
+# D
+Dangal
+Devdas
+Dilwale Dulhania Le Jayenge
+Dhoom
+Don
+Dabangg
+Dushman
+Deewaar
+Dil Chahta Hai
+Dhamaal
+Darr
+Daud
+Dayavan
+Desh Premee
+Dhadkan
+Dil Se
+Dil To Pagal Hai
+Do Bigha Zamin
+Do Knot Disturb
+Dostana
+
+# E
+Ek Villain
+Ekk Deewana Tha
+Eklavya
+Ek Ajnabee
+English Vinglish
+Ehsaas
+Eeshwar
+Ek Thi Daayan
+Ehsaan
+Ekk Nayi Pehchaan
+Ek Doctor Ki Maut
+Ek Hasina Thi
+Ek Ladki Ko Dekha Toh Aisa Laga
+Ek Main Aur Ekk Tu
+Ek Phool Do Mali
+Elaan
+Ek Ruka Hua Faisla
+Emaan
+Enthiran
+Ekti Tarar Khonje
+
+# F
+Fanaa
+Fashion
+Fukrey
+Force
+Fiza
+Firangi
+Fan
+Freaky Ali
+Fun2shh
+Ferrari Ki Sawaari
+Fida
+Footpath
+Fukrey Returns
+Faltu
+Four Lions
+Faisla
+Fateh
+Fanaa
+Fiza
+Fidaa
+
+# G
+Gangs of Wasseypur
+Ghajini
+Guide
+Guru
+Ghayal
+Gangaajal
+Gulaal
+Golmaal
+Ghulam
+Gopi
+Gadar
+Garam Masala
+Gardish
+Ghar Ho To Aisa
+Ghatak
+Go Goa Gone
+Good Newwz
+Gumrah
+Gunehgar
+Golmaal Again
+
+# H
+Haider
+Hera Pheri
+Hum Aapke Hain Koun
+Hero
+Hamari Adhuri Kahani
+Hungama
+Haseena Maan Jaayegi
+Hindustani
+Hum
+Hawas
+Haathi Mere Saathi
+Hamesha
+Hare Rama Hare Krishna
+Hasee Toh Phasee
+Hero No 1
+Highway
+Himmatwala
+Hulchul
+Hum Hain Rahi Pyar Ke
+Hum Tum
+
+# I
+Iqbal
+Ishq
+Ishqiya
+Insaaf
+Imaan
+Ijaazat
+Ittefaq
+Ishaqzaade
+Ishq Vishk
+Indu
+I Am Kalam
+I Hate Luv Storys
+Inteha
+Insaniyat
+Izzat
+Inkaar
+Ikkees
+Ishqedarriyaan
+Ishq Mein Marjawan
+Insaf Ki Pukar
+
+# J
+Jai Bhim
+Jawan
+Jab We Met
+Jodhaa Akbar
+Josh
+Jaanwar
+Jannat
+Jeet
+Judaai
+Jhoom Barabar Jhoom
+Jaani Dushman
+Jab Tak Hai Jaan
+Jai Ho
+Jal
+Jalsa
+Jamai Raja
+Jeeva
+Jeevan Mrityu
+Johnny Gaddaar
+Judwaa
+
+# K
+Kabhi Khushi Kabhie Gham
+Kaho Naa Pyaar Hai
+Kal Ho Naa Ho
+Karan Arjun
+Koi Mil Gaya
+Krish
+Khalnayak
+Kuch Kuch Hota Hai
+Kabir Singh
+Kalank
+Kabhi Alvida Naa Kehna
+Kabhi Haan Kabhi Naa
+Kachche Dhaage
+Kaal
+Kahaani
+Kahani Kismat Ki
+Kajraare
+Kambakkht Ishq
+Karam
+Karz
+
+# L
+Lagaan
+Laawaris
+Lamhe
+Lakshya
+Lajja
+The Legend of Bhagat Singh
+Lootera
+Lage Raho Munna Bhai
+Love Aaj Kal
+Loafer
+Ladies vs Ricky Bahl
+Lahu Ke Do Rang
+Lakshmanrekha
+Lal Baadshah
+Life in a Metro
+London Dreams
+Love Story 2050
+Luck By Chance
+Laadla
+Lukka Chuppi
+
+# M
+Mughal-e-Azam
+Mother India
+Munna Bhai MBBS
+Mr. India
+Masoom
+Mary Kom
+Mission Kashmir
+Main Hoon Na
+Mera Naam Joker
+Mangal Pandey
+Madhumati
+Maine Pyar Kiya
+Maja Ma
+Malamaal Weekly
+Manikarnika
+Manjhi
+Meera
+Mela
+Milan
+Mohabbatein
+
+# N
+Nayak
+Namak Haraam
+Naam
+Naseeb
+Naya Daur
+Nishant
+New Delhi
+Nastik
+Nadiya Ke Paar
+Nagina
+Namastey London
+Nanhe Jaisalmer
+Naqaab
+Nasha
+Navrang
+Neel Kamal
+Nikaah
+Nirmaan
+Nischay
+No Entry
+
+# O
+Om Shanti Om
+Omkara
+Oonche Log
+Once Upon a Time in Mumbaai
+One 2 Ka 4
+Officer
+Ok Jaanu
+October
+Oye Lucky Lucky Oye
+Othello
+OMG Oh My God
+Om Jai Jagadish
+One Night Stand
+Oonchi Haveli
+Operation Romeo
+Osama
+O Re Manwa
+Om Namah Shivay
+Oonche Log
+Officer
+
+# P
+Pyaasa
+Parinda
+Padosan
+Page 3
+Paheli
+Pinjar
+Piku
+Pink
+Padmaavat
+Prem Ratan Dhan Payo
+Paap
+Padmashree Laloo Prasad Yadav
+Panga
+Papa Kehte Hain
+Pardes
+Partner
+Patiala House
+Phir Bhi Dil Hai Hindustani
+Pyaar Kiya To Darna Kya
+Pyaar To Hona Hi Tha
+
+# Q
+Qayamat Se Qayamat Tak
+Queen
+Qurbani
+Qayamat
+Qarib Qarib Singlle
+Qissa
+Quick Gun Murugan
+Qatil
+Qaid
+Qismat
+Qila
+Qayamat Ki Raat
+Qatil Kaun
+Qurbaan
+Qismat Ki Kasam
+Quicksilver
+Qayamat City Under Threat
+Queen of Hearts
+Qaidi
+Qaid Mein Hai Bulbul
+
+# R
+Rockstar
+Raazi
+Rang De Basanti
+Rustom
+Ram Lakhan
+Raja Hindustani
+Raid
+Raanjhanaa
+Rocky Handsome
+Rakht Charitra
+Raakh
+Raat
+Rab Ne Bana Di Jodi
+Raja
+Raju Ban Gaya Gentleman
+Ram Aur Shyam
+Ram Teri Ganga Maili
+Refugee
+Roja
+Rakhi
+
+# S
+Sholay
+Satya
+Swades
+Sultan
+Shaan
+Sadma
+Sarfarosh
+Sarkar
+Silsila
+Special 26
+Saajan
+Sadak
+Sairat
+Salaam Bombay
+Sangam
+Sanju
+Satte Pe Satta
+Seeta Aur Geeta
+Shakti
+Shakti
+
+# T
+Taare Zameen Par
+Talaash
+Tanhaji
+Trishul
+Trimurti
+Tezaab
+Tere Naam
+Tumbbad
+Toofan
+Talash
+Taal
+Tadipaar
+Tahalka
+Tango Charlie
+Teesri Manzil
+Tera Jadoo Chal Gaya
+Thakshak
+Thodi Life Thoda Magic
+Tridev
+Tum Bin
+
+# U
+Uri
+Udaan
+Umrao Jaan
+Utsav
+Ustad
+Unishe April
+Uttara
+Ujda Chaman
+Upkar
+Umar
+Uff Yeh Mohabbat
+Ustadon Ke Ustad
+Unns
+Ulta Palta
+Udan Khatola
+Umeed
+Ustaad
+Utthan
+Uparwala
+Ulfat Ki Nayi Manzilen
+
+# V
+Veer-Zaara
+Vishwaroopam
+Vaastav
+Vivah
+Vicky Donor
+Vodka Diaries
+Veergati
+Vijaypath
+Vardi
+Vishwatma
+Vaah Life Ho Toh Aisi
+Vaada
+Vaapsi
+Veer
+Veere Di Wedding
+Videsh
+Vidhaata
+Vijay
+Vikram Vedha
+Vishnu
+
+# W
+Wazir
+War
+Wake Up Sid
+Waqt
+Wanted
+Welcome
+Water
+Well Done Abba
+Woh Saat Din
+Waqt Ki Awaz
+Waqt Hamara Hai
+Wedding Pullav
+Woh Lamhe
+Woh Tera Naam Tha
+Welcome Back
+White Tiger
+Waqt Ki Deewar
+Woh Phir Aayegi
+Waaris
+Wajah Tum Ho
+
+# X
+X: Past Is Present
+Xcuse Me
+X-Ray
+Xpose
+Xtreme
+X-Factor
+X
+X-Kross
+XOXO
+Xanadu
+Xtra
+Xcuse Me 2
+X-Ray: The Inner Eye
+Xtreme Limit
+Xylo
+Xandu
+Xcellence
+Xclusiv
+Xenon
+Xena
+
+# Y
+Yaadein
+Yaarana
+Yamla Pagla Deewana
+Yeh Dillagi
+Yeh Jawaani Hai Deewani
+Yuvvraaj
+Yuva
+Yaad Rakhegi Duniya
+Yash
+Yaar Gaddar
+Yeh Hai Jalwa
+Yeh Teraa Ghar Yeh Meraa Ghar
+Yes Boss
+Yakeen
+Yaraana
+Yeh Raaste Hain Pyaar Ke
+Yun Hota Toh Kya Hota
+Yahaan
+Yogi
+Yaar Meri Zindagi
+
+# Z
+Zamaana Deewana
+Zubeidaa
+Zindagi Na Milegi Dobara
+Ziddi
+Zakhm
+Zameen
+Zanjeer
+Zulmi
+Zor
+Zeher
+Zakhmi
+Zamane Ko Dikhana Hai
+Zara Si Zindagi
+Zinda
+Zindagi
+Zulm Ki Hukumat
+Zid
+Zamaanat
+Zara Hatke Zara Bachke
+Zameer
