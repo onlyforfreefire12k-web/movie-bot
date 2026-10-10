@@ -1,4 +1,5 @@
 # live.py
+import importlib
 import logging
 import os
 import threading
@@ -6,8 +7,6 @@ import threading
 from flask import Flask
 from telegram.ext import Application
 
-# --- your existing imports ---
-# from your_project import register_word_chain, build_app, ... 
 import movie_chain
 
 logging.basicConfig(
@@ -17,14 +16,13 @@ logging.basicConfig(
 logger = logging.getLogger("live")
 
 # --------------------------------------------------------------------------
-# Flask health server (ADDED — health only, no bot logic here)
+# Flask health server (health only)
 # --------------------------------------------------------------------------
 web = Flask(__name__)
 
 
 @web.get("/")
 def health():
-    # Simple 200 so Render's health check passes.
     return "Movie Chain bot is running.", 200
 
 
@@ -36,12 +34,15 @@ def healthz():
 def _serve_web() -> None:
     port = int(os.environ.get("PORT", 10000))
     logger.info("Health web server on 0.0.0.0:%d", port)
-    # use_reloader=False -> no second process, no duplicate polling.
-    web.run(host="0.0.0.0", port=port, threaded=True, use_reloader=False)
+    try:
+        from waitress import serve  # production WSGI, kills the dev-server warning
+        serve(web, host="0.0.0.0", port=port, threads=4)
+    except ImportError:
+        web.run(host="0.0.0.0", port=port, threaded=True, use_reloader=False)
 
 
 # --------------------------------------------------------------------------
-# Bot lifecycle (ADDED hooks; reuse your existing build/register code)
+# Bot lifecycle
 # --------------------------------------------------------------------------
 async def post_init(app: Application) -> None:
     me = await app.bot.get_me()
@@ -49,13 +50,34 @@ async def post_init(app: Application) -> None:
 
 
 async def post_shutdown(app: Application) -> None:
-    # Kill every live Movie Chain timer before exit (Render sends SIGTERM).
     await movie_chain.cancel_all()
     logger.info("Shutdown complete; timers cancelled.")
 
 
+def _find_register_word_chain():
+    """Try common module/function names for the existing Word Chain registration."""
+    candidates = [
+        ("word_chain", "register_word_chain"),
+        ("wordchain", "register_word_chain"),
+        ("word_chain", "register"),
+        ("bot", "register_word_chain"),
+        ("handlers", "register_word_chain"),
+        ("game", "register_word_chain"),
+    ]
+    for modname, funcname in candidates:
+        try:
+            mod = importlib.import_module(modname)
+        except ImportError:
+            continue
+        fn = getattr(mod, funcname, None)
+        if callable(fn):
+            logger.info("Found Word Chain register: %s.%s", modname, funcname)
+            return fn
+    return None
+
+
 def build_app() -> Application:
-    token = os.environ["TELEGRAM_BOT_TOKEN"]  # reuse existing var name
+    token = os.environ["TELEGRAM_BOT_TOKEN"]  # rename if your var differs
     app = (
         Application.builder()
         .token(token)
@@ -64,18 +86,21 @@ def build_app() -> Application:
         .build()
     )
 
-    # --- your existing registrations (Word Chain etc.) stay here ---
-    register_word_chain(app)
+    wc = _find_register_word_chain()
+    if wc:
+        wc(app)
+    else:
+        logger.warning(
+            "Word Chain register not found — skipping. "
+            "Set it manually in build_app() if needed."
+        )
 
-    # --- new game, fully isolated per chat ---
     movie_chain.register(app)
     return app
 
 
 def main() -> None:
-    # Start web server FIRST so Render health checks succeed immediately.
     threading.Thread(target=_serve_web, name="flask", daemon=True).start()
-
     app = build_app()
     try:
         app.run_polling(drop_pending_updates=True)
