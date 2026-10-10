@@ -54,7 +54,6 @@ BOT_NAMES = [
 ]
 _BOT_IDS = itertools.count(-1, -1)
 
-# difficulty -> bot behaviour
 DIFFICULTIES = {
     "easy":   {"accuracy": 0.70, "min_delay": 3.0, "max_delay": 6.0, "smart": False},
     "medium": {"accuracy": 0.88, "min_delay": 2.0, "max_delay": 4.5, "smart": False},
@@ -218,7 +217,7 @@ WELCOME_TEXT = (
     "with the <b>last letter</b> of the previous one.\n\n"
     "⏱ <b>20 seconds</b> per turn — time out means eliminated.\n"
     "🏆 Last player standing wins.\n"
-    "🤖 Want to play alone? → /solo\n\n"
+    "🤖 Want to play alone? Tap <b>Play Solo</b>.\n\n"
     "Full guide: /mchelp"
 )
 
@@ -266,6 +265,14 @@ def _lobby_keyboard() -> InlineKeyboardMarkup:
          InlineKeyboardButton("Add Bot", callback_data="mc:addbot")],
         [InlineKeyboardButton("Start", callback_data="mc:start"),
          InlineKeyboardButton("Cancel", callback_data="mc:cancel")],
+    ])
+
+
+def _start_keyboard() -> InlineKeyboardMarkup:
+    return InlineKeyboardMarkup([
+        [InlineKeyboardButton("🤖 Play Solo", callback_data="mc:solo"),
+         InlineKeyboardButton("👥 Create Game", callback_data="mc:new")],
+        [InlineKeyboardButton("📖 How to Play", callback_data="mc:help")],
     ])
 
 
@@ -486,24 +493,57 @@ async def _handle_submission(app: Application, game: MovieChainGame, user, text:
         await _accept_movie(app, game, player, norm)
 
 # --------------------------------------------------------------------------
-# Commands
+# Game-start helpers (used by commands AND callback buttons)
 # --------------------------------------------------------------------------
-async def cmd_mc(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    chat, user = update.effective_chat, update.effective_user
-    if chat is None or user is None or update.message is None:
-        return
+async def _create_lobby(app: Application, chat, user) -> None:
     existing = GAMES.get(chat.id)
     if existing and existing.status in ("lobby", "running"):
-        await update.message.reply_text("A Movie Chain game is already active in this chat.")
+        await _safe_send(app.bot, chat.id, "A Movie Chain game is already active in this chat.")
         return
     game = MovieChainGame(chat.id, user.id, user.first_name or "Host")
     game.players[user.id] = Player(user.id, user.first_name or "Host")
     GAMES[chat.id] = game
-    await _safe_send(context.bot, chat.id, WELCOME_TEXT, parse_mode=ParseMode.HTML)
-    msg = await _safe_send(context.bot, chat.id, _lobby_text(game),
+    msg = await _safe_send(app.bot, chat.id, _lobby_text(game),
                            reply_markup=_lobby_keyboard(), parse_mode=ParseMode.HTML)
     if msg:
         game.join_message_id = msg.message_id
+
+
+async def _start_solo(app: Application, chat, user, difficulty: str) -> None:
+    if (g := GAMES.get(chat.id)) and g.status in ("lobby", "running"):
+        await _safe_send(app.bot, chat.id, "A game is already running in this chat.")
+        return
+    if difficulty not in DIFFICULTIES:
+        difficulty = DEFAULT_DIFFICULTY
+    game = MovieChainGame(chat.id, user.id, user.first_name or "You", difficulty=difficulty)
+    game.players[user.id] = Player(user.id, user.first_name or "You")
+    for _ in range(3):
+        _add_bot(game)
+    game.order = list(game.players.keys())
+    random.shuffle(game.order)
+    game.turn_index = 0
+    game.status = "running"
+    GAMES[chat.id] = game
+    await _safe_send(app.bot, chat.id, f"Solo mode ({difficulty}): you vs 3 bots. Go!")
+    async with game.lock:
+        await _begin_turn(app, game)
+
+# --------------------------------------------------------------------------
+# Commands
+# --------------------------------------------------------------------------
+async def cmd_start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    if update.message is None:
+        return
+    await update.message.reply_text(
+        WELCOME_TEXT, parse_mode=ParseMode.HTML, reply_markup=_start_keyboard()
+    )
+
+
+async def cmd_mc(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    chat, user = update.effective_chat, update.effective_user
+    if chat is None or user is None or update.message is None:
+        return
+    await _create_lobby(context.application, chat, user)
 
 
 async def cmd_help(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -516,27 +556,8 @@ async def cmd_solo(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     chat, user = update.effective_chat, update.effective_user
     if chat is None or user is None or update.message is None:
         return
-    if (g := GAMES.get(chat.id)) and g.status in ("lobby", "running"):
-        await update.message.reply_text("A game is already running in this chat.")
-        return
     difficulty = (context.args[0].lower() if context.args else DEFAULT_DIFFICULTY)
-    if difficulty not in DIFFICULTIES:
-        difficulty = DEFAULT_DIFFICULTY
-    game = MovieChainGame(chat.id, user.id, user.first_name or "You", difficulty=difficulty)
-    game.players[user.id] = Player(user.id, user.first_name or "You")
-    for _ in range(3):
-        _add_bot(game)
-    game.order = list(game.players.keys())
-    random.shuffle(game.order)
-    game.turn_index = 0
-    game.status = "running"
-    GAMES[chat.id] = game
-    await update.message.reply_text(
-        f"Solo mode ({difficulty}): you vs 3 bots. Go!\n"
-        f"Order: {', '.join(_esc(game.players[u].name) for u in game.order)}"
-    )
-    async with game.lock:
-        await _begin_turn(context.application, game)
+    await _start_solo(context.application, chat, user, difficulty)
 
 
 async def cmd_stop(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -592,6 +613,16 @@ async def on_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) -> Non
         return
     action = query.data.split(":", 1)[1] if ":" in query.data else ""
     game = GAMES.get(chat.id)
+
+    if action == "solo":
+        await _start_solo(context.application, chat, user, DEFAULT_DIFFICULTY)
+        return
+    if action == "new":
+        await _create_lobby(context.application, chat, user)
+        return
+    if action == "help":
+        await _safe_send(context.bot, chat.id, HELP_TEXT, parse_mode=ParseMode.HTML)
+        return
 
     if action == "join":
         if not game or game.status != "lobby":
@@ -673,6 +704,7 @@ async def on_text(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 # --------------------------------------------------------------------------
 def register(app: Application, group: int = 0) -> None:
     DB.load([MOVIES_DIR / f for f in MOVIE_FILES])
+    app.add_handler(CommandHandler(["start"], cmd_start), group=group)
     app.add_handler(CommandHandler(["mc", "moviechain"], cmd_mc), group=group)
     app.add_handler(CommandHandler(["mchelp", "help"], cmd_help), group=group)
     app.add_handler(CommandHandler("solo", cmd_solo), group=group)
